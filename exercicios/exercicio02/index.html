@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GN 00</title>
+    <title>GN 02</title>
     <style>
         *{
             margin: 0px;
@@ -43,7 +43,7 @@
             font-size: 15px;
             width: 50%;
         }
-        input#ienviar{
+        button#enviar{
             padding: 10px;
             border: none;
             outline: none;
@@ -53,7 +53,7 @@
             border-radius: 10px;
             cursor: pointer;
         }
-        input#ienviar:hover{
+        button#enviar:hover{
             background-color: cornflowerblue;
             transition: 0.5s;
         }
@@ -62,15 +62,31 @@
 </head>
 <body>
     <header>
-        <h1>Exercício #00</h1>
+        <h1>Exercício #02</h1>
         <h2>Prof. Gustavo Neitzke</h2>
     </header>
     <main>
-        <p>Questão...</p>
+        <p>Leia valores A e B. Trocar os valores entre as duas variáveis, a variável A passa a possuir o valor da variável B e a variável B passa a possuir o valor da variável A.</p>
         <br>
-        <input type="text" id="">
+        <input type="text" name="name" id="valor-a" placeholder="Digite um valor A">
         <br><br>
-        <input type="submit" id="ienviar" value="Enviar">
+        <input type="text" name="name" id="valor-b" placeholder="Digite um valor B">
+        <br><br>
+        <button onclick="go()" id="enviar" >Enviar</button>
     </main>
 </body>
+<script>
+    function go()
+    {
+        var a = document.getElementById('valor-a').value
+        var b = document.getElementById('valor-b').value
+        console.log('Variável A: ' + a);
+        console.log('Variável B: ' + b);
+        var c = b;
+        var b = a;
+        var a = c;
+        console.log('Variável A: ' + a);
+        console.log('Variável B: ' + b);
+    }
+</script>
 </html>

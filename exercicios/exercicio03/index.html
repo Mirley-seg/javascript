@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GN 00</title>
+    <title>GN 03</title>
     <style>
         *{
             margin: 0px;
@@ -43,7 +43,7 @@
             font-size: 15px;
             width: 50%;
         }
-        input#ienviar{
+        button{
             padding: 10px;
             border: none;
             outline: none;
@@ -53,7 +53,7 @@
             border-radius: 10px;
             cursor: pointer;
         }
-        input#ienviar:hover{
+        button:hover{
             background-color: cornflowerblue;
             transition: 0.5s;
         }
@@ -62,15 +62,29 @@
 </head>
 <body>
     <header>
-        <h1>Exercício #00</h1>
+        <h1>Exercício #03</h1>
         <h2>Prof. Gustavo Neitzke</h2>
     </header>
     <main>
-        <p>Questão...</p>
+        <p>Leia a idade de duas crianças. Após, calcular e mostrar a soma das idades e a média.</p>
         <br>
-        <input type="text" id="">
+        <input type="number" id="icrianca1" placeholder="Digite a idade da primeira">
         <br><br>
-        <input type="submit" id="ienviar" value="Enviar">
+        <input type="number" id="icrianca2" placeholder="Digite a idade da segunda">
+        <br><br>
+        <button onclick="somamedia()">Enviar</button>
     </main>
 </body>
+<script>
+    function somamedia()
+    {
+        var idade1 = parseInt(document.querySelector('#icrianca1').value)
+        var idade2 = parseInt(document.querySelector('#icrianca2').value);
+        var soma = idade1 + idade2;
+        var media = soma / 2;
+        console.log('Soma: ' + soma);
+        console.log('Media: ' + media)
+
+    }
+</script>
 </html>
