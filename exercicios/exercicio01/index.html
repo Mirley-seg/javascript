@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GN 01</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(46, 68, 109);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+        header{
+            background-color: rgb(152, 129, 255);
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.562);
+            border-radius: 15px;
+            margin: 5px;
+            padding: 15px;
+            line-height: 2.5em;
+        }
+        main{
+            background-color: rgba(0, 0, 0, 0.616);
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        input#iname{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        input#enviar{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        input#enviar:hover{
+            background-color: cornflowerblue;
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercício #01</h1>
+    </header>
+        <main>
+            <p>Leia o valor de um input e mostre em um alert</p>
+            <br>
+            <input type="text" name="name" id="iname" placeholder="Digite algo">
+            <br><br>
+            <input onclick="go()" type="submit" id="enviar" value="Enviar">
+        </main>
+</body>
+<script>
+    function go()
+    {
+        var valueInput = document.getElementById('iname').value;
+        alert(valueInput);
+    }
+</script>
+</html>
